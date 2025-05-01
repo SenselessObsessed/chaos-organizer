@@ -1,1 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  background-color: rgba(60, 60, 60, 1);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 35%;
+}
+
+.header {
+  position: relative;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(63, 73, 87);
+  width: 100%;
+  min-height: 2%;
+  border: 1px solid white;
+}
+
+.header__name {
+  font-size: 24px;
+  color: white;
+}
+
+.header__search,
+.header__more,
+.input__voice,
+.input__smile,
+.input__file {
+  cursor: pointer;
+  max-height: 30px;
+}
+
+.input {
+  display: flex;
+  align-items: end;
+  padding: 10px;
+  width: 100%;
+  min-height: 2%;
+  background-color: rgb(63, 73, 87);
+  border: 1px solid white;
+}
+
+.input__input {
+  min-height: 20px;
+  width: 100%;
+  margin: 0 10px;
+  border: none;
+  background-color: rgb(63, 73, 87);
+  border: 1px solid white;
+  outline: none;
+  color: white;
+}
+
+/* fix */
+.messages {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  background-color: lightslategray;
+  height: 100%;
+  width: 100%;
+
+  overflow: auto;
+}
+
+.messages__message {
+  display: block;
+  background-color: rgb(77, 77, 77);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  max-width: 50%;
+  color: white;
+}
+.messages__message-text {
+  margin: 0;
+  display: inline-block;
+}
+
+.messages__message-time {
+  margin-left: auto;
+  margin-top: 23px;
+  font-size: 12px;
+  min-width: 100px;
+}
+
+.user {
+  margin-left: auto;
+}
+
+.bot {
+  margin-right: auto;
+}
+
+.messages__message-img {
+  background-color: rgb(77, 77, 77);
+  max-width: 50%;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  border-radius: 15px;
+}
+.messages__message-image {
+  border-radius: 15px;
+  max-height: 230px;
+  max-width: 450px;
+}
+
+.messages__message-time-img {
+  margin-bottom: 10px;
+  text-align: end;
+  color: white;
+  font-size: 12px;
+}
+
+.messages__message-audio,
+.messages__message-video {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.messages__message-time-audio,
+.messages__message-time-video {
+  margin-top: 5px;
+  font-size: 12px;
+  color: white;
+  text-align: end;
+}
+
+.messages__message-audio-aud {
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+video {
+  margin-left: auto;
+}
+
+.file {
+  cursor: pointer;
+  display: flex;
+}
+
+.file-desc {
+  color: white;
+  line-height: 25px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.messages__message-file {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(77, 77, 77);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  width: 210px;
+}
+
+.messages__message-time-file {
+  margin-top: auto;
+  color: white;
+  font-size: 12px;
+}
+
+.drop {
+  position: absolute;
+  top: -1125px;
+  left: 5px;
+}
+
+.input {
+  position: relative;
+}
+
+.drop-file {
+  opacity: 0;
+  position: absolute;
+  width: 35vw;
+  height: 85vh;
+}
+
+.placeholder-drop {
+  pointer-events: none;
+  outline: 5px solid gray;
+  border: 5px dashed white;
+  width: 35vw;
+  height: 85vh;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.modal-more {
+  z-index: 99999;
+  left: 27vw;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  position: absolute;
+  gap: 8px;
+}
+
+.modal-more-item {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.close-modal-more {
+  cursor: pointer;
+  top: 0.1vh;
+  left: 15vw;
+  position: absolute;
+}
+
+.pin-message {
+  position: relative;
+  color: white;
+  border: 1px solid white;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(77, 77, 77);
+}
+
+.unpin {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.pinned-message {
+  pointer-events: none;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.input__file {
+  min-width: 2vw;
+  min-height: 2vh;
+  position: relative;
+}
+
+.input-file-btn {
+  top: -7px;
+  opacity: 0;
+  height: 4vh;
+  width: 1vw;
+  position: absolute;
+}
+
+.input__file-placeholder {
+  cursor: pointer;
+  pointer-events: none;
+  top: -7px;
+  height: 3vh;
+  position: absolute;
+}
+
+.search-message {
+  padding: 5px;
+  width: 23vw;
+  background-color: rgb(77, 77, 77);
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+.smiles {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: -45px;
+  right: 7px;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(90, 90, 90);
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.emoji {
+  cursor: pointer;
+  width: 30px;
+}
+
+.emoji-smile {
+  margin-left: 7px;
+}
+
+.messages__message {
+  position: relative;
+}
+
+.pin {
+  position: absolute;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+}
+
+.star {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 30px;
+}
+
+.input-search-close {
+  cursor: pointer;
+  position: absolute;
+  right: 3.4vw;
+}
+
+.modal-upper {
+  top: 73vh;
+  left: 40vw;
+  font-size: 20px;
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  position: absolute;
+  z-index: 99999;
+  text-align: center;
+  line-height: 50px;
+}
+
+.modal-upper-close {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 99999;
+}
+
+.none {
+  display: none;
+}
