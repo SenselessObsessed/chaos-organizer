@@ -378,6 +378,56 @@ video {
   z-index: 99999;
 }
 
+.audio-btn-block {
+  color: white;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.audio-done,
+.audio-cancel {
+  cursor: pointer;
+}
+
+.modal-geo,
+.modal-import {
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  top: 40vh;
+  left: 40vw;
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.coords-input,
+.import-input {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 490px;
+}
+
+.cancel-geo,
+.ok-geo,
+.cancel-import,
+.ok-import {
+  cursor: pointer;
+  margin-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.btn-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .none {
   display: none;
 }

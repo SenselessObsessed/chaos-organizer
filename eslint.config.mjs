@@ -14,6 +14,6 @@ export default [
     },
   },
   {
-    ignores: ["dist/*"],
+    ignores: ["dist/*", './src/js/service.worker.js'],
   },
 ];
