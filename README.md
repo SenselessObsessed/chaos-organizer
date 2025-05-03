@@ -1,10 +1,14 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/m6ec0ee08wmdyxuo?svg=true)](https://ci.appveyor.com/project/SenselessObsessed/chaos-organizer)
 
+[Backend](https://github.com/SenselessObsessed/chaos-organizer-backend) к заданию
+
+---
+
 # Проект Chaos Organizer
 
 ## В чате сохраняются текстовые сообщения в том числе ссылки
 
-- Ссылки отображаются как ссылки и функционируют как ссылки
+Ссылки отображаются как ссылки и функционируют как ссылки
 
 ![](./pic/text%20and%20urls.png)
 
@@ -13,20 +17,21 @@
 - Загрузить можно как Drag & Drop
 - Так же по нажатию на значок файла
 
-![](./pic/file.mp4)
-![](./pic/drag%20and%20drop.mp4)
+![](./pic/file.png)
+
+![](./pic/drag%20and%20drop.png)
 
 ## По можно скачивать фалы на компьютер пользователя
 
 - По нажатию на сообщение с файлом
 
-![](./pic/download%20file.mp4)
+![](./pic/file-download.png)
 
 - Скачать видео
 
-  ![](./pic/download-video.png)
+![](./pic/download-video.png)
 
-* Скачать аудио
+- Скачать аудио
 
 ![](./pic/audio-download.png)
 
@@ -139,5 +144,3 @@
 ![](./pic/smiles.png)
 
 ---
-
-**На этом все**
